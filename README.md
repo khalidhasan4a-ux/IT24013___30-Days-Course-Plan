@@ -89,3 +89,106 @@ public class Main {
         d1.sound();
     }
 }
+
+
+
+Date : 21/04/2025
+
+Day #02
+
+Topic : Access Modifiers (public, private, protected, default), Non-Access Modifiers (static, final, abstract)
+
+Source Code : https://github.com/khalidhasan4a-ux/IT24013___30-Days-Course-Plane/tree/main/Day%2001
+
+Video : https://www.youtube.com/watch?v=lWFzm8qIR1c
+
+
+Example #01
+
+// Code 1: Access Modifiers Example
+
+class Student {
+
+    public String name;        // Public (anywhere access)
+    private int age;           // Private (only inside class)
+    protected String school;   // Protected (same package + subclass)
+    String city;               // Default (same package)
+
+    // Setter for private variable
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    // Getter for private variable
+    public int getAge() {
+        return age;
+    }
+
+    public void display() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("School: " + school);
+        System.out.println("City: " + city);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Student s1 = new Student();
+
+        s1.name = "Jadid";     // public
+        s1.setAge(20);         // private via setter
+        s1.school = "XYZ School"; // protected
+        s1.city = "Dhaka";     // default
+
+        s1.display();
+    }
+}
+
+
+Example #02
+
+
+// Code 2: static, final, abstract Example
+
+abstract class Shape {
+
+    // Abstract method (must be implemented)
+    abstract void draw();
+
+    // Static method
+    static void info() {
+        System.out.println("This is Shape class");
+    }
+}
+
+class Circle extends Shape {
+
+    final double PI = 3.1416; // Final (constant)
+
+    double radius;
+
+    Circle(double radius) {
+        this.radius = radius;
+    }
+
+    // Implement abstract method
+    void draw() {
+        System.out.println("Drawing Circle");
+        double area = PI * radius * radius;
+        System.out.println("Area: " + area);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        // Static method call
+        Shape.info();
+
+        Circle c1 = new Circle(5);
+        c1.draw();
+    }
+}
+
