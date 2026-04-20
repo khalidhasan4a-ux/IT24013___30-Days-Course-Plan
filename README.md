@@ -98,7 +98,7 @@ Day #02
 
 Topic : Access Modifiers (public, private, protected, default), Non-Access Modifiers (static, final, abstract)
 
-Source Code : https://github.com/khalidhasan4a-ux/IT24013___30-Days-Course-Plane/tree/main/Day%2001
+Source Code : https://github.com/khalidhasan4a-ux/IT24013___30-Days-Course-Plan/tree/main/Day%2002
 
 Video : https://www.youtube.com/watch?v=lWFzm8qIR1c
 
