@@ -1,8 +1,10 @@
+// Code 1: Access Modifiers Example
+
 class Student {
 
     public String name;        // Public (anywhere access)
     private int age;           // Private (only inside class)
-    protected String school;   // Protected (same package + subclass)
+    protected String university;   // Protected (same package + subclass)
     String city;               // Default (same package)
 
     // Setter for private variable
@@ -18,7 +20,7 @@ class Student {
     public void display() {
         System.out.println("Name: " + name);
         System.out.println("Age: " + age);
-        System.out.println("School: " + school);
+        System.out.println("University: " + university);
         System.out.println("City: " + city);
     }
 }
@@ -28,10 +30,10 @@ public class Main {
 
         Student s1 = new Student();
 
-        s1.name = "Jadid";     // public
-        s1.setAge(20);         // private via setter
-        s1.school = "XYZ School"; // protected
-        s1.city = "Dhaka";     // default
+        s1.name = "Khalid";     // public
+        s1.setAge(23);         // private via setter
+        s1.university = "MBSTU"; // protected
+        s1.city = "Tangail";     // default
 
         s1.display();
     }
