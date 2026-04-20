@@ -1,7 +1,5 @@
-// Code 1: Class, Object, Properties, Methods
-
 class Student {
-    // Properties (Attributes)
+    // Properties 
     String name;
     int age;
 
