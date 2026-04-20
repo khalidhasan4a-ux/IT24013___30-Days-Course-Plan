@@ -1,8 +1,6 @@
-// Code 2: Inheritance, Encapsulation, Polymorphism
-
 class Animal {
 
-    // Encapsulation (private variable)
+    // Encapsulation 
     private String name;
 
     // Setter
