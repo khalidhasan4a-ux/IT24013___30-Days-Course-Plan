@@ -92,6 +92,10 @@ public class Main {
 
 
 
+
+
+
+
 Date : 21/04/2025
 
 Day #02
@@ -147,6 +151,7 @@ public class Main {
 }
 
 
+
 Example #02
 
 
@@ -194,6 +199,8 @@ public class Main {
 
 
 
+
+
 Date : 22/04/2025
 
 Day #03
@@ -237,6 +244,7 @@ public class Main {
         System.out.println("Balance: " + acc.getBalance());
     }
 }
+
 
 
 Example #02
