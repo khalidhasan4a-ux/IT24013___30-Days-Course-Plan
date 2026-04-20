@@ -1,5 +1,3 @@
-// Code 1: Access Modifiers Example
-
 class Student {
 
     public String name;        // Public (anywhere access)
