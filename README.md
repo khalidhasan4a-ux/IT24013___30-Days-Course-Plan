@@ -502,3 +502,92 @@ public class Main {
     }
 }
 
+
+
+Date : 25/04/2025
+
+Day #06
+
+Topic : Compile-Time Polymorphism (Method Overloading), Runtime Polymorphism (Method Overriding)
+
+Source Code : 
+
+Video : https://www.youtube.com/watch?v=bLke13zY4rg&list=PLSGubLIO9kuDMrAqU8bVQx4Zv-E-6AEnj&index=7
+
+Example #01
+
+
+// Code 1: Compile-Time Polymorphism (Method Overloading)
+
+class MathOperation {
+
+    // Method 1
+    void add(int a, int b) {
+        System.out.println("Sum = " + (a + b));
+    }
+
+    // Method 2 (same name, different parameters)
+    void add(int a, int b, int c) {
+        System.out.println("Sum = " + (a + b + c));
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        MathOperation obj = new MathOperation();
+
+        obj.add(5, 10);
+        obj.add(5, 10, 15);
+    }
+}
+
+Example #02
+
+
+// Code 2: Runtime Polymorphism (Method Overriding)
+
+class Animal {
+
+    void sound() {
+        System.out.println("Animal makes sound");
+    }
+}
+
+class Dog extends Animal {
+
+    @Override
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Animal a;
+
+        // Parent reference, child object
+        a = new Dog();
+
+        // Runtime decides which method runs
+        a.sound();
+    }
+}
+
+
+
+
+Date : 26/04/2025
+
+Day #07
+
+Topic : 
+
+Source Code : 
+
+Video : 
+
+Example #01
+
+
