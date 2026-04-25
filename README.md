@@ -389,3 +389,116 @@ public class Main {
         c2.display();
     }
 }
+
+
+
+
+
+Date : 24/04/2025
+
+Day #05
+
+Topic : Single Inheritance + Method Overriding, Multilevel + Hierarchical Inheritance
+
+Source Code : https://github.com/khalidhasan4a-ux/IT24013___30-Days-Course-Plan/tree/main/Day%2005
+
+Video : https://www.youtube.com/watch?v=j_VA2Rp6jM0
+
+
+Example #01
+
+
+// Code 1: Single Inheritance
+
+class Animal {
+
+    String name = "Animal";
+
+    void eat() {
+        System.out.println(name + " is eating");
+    }
+
+    void sound() {
+        System.out.println("Animal makes sound");
+    }
+}
+
+// Dog inherits Animal
+class Dog extends Animal {
+
+    // Method overriding
+    @Override
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Dog d1 = new Dog();
+
+        // Inherited method
+        d1.eat();
+
+        // Overridden method
+        d1.sound();
+    }
+}
+
+
+
+
+Example #02
+
+
+// Code 2: Multilevel and Hierarchical Inheritance
+
+class Animal {
+
+    void eat() {
+        System.out.println("Animal eats food");
+    }
+}
+
+// Multilevel Inheritance
+class Dog extends Animal {
+
+    void bark() {
+        System.out.println("Dog barks");
+    }
+}
+
+class Puppy extends Dog {
+
+    void weep() {
+        System.out.println("Puppy weeps");
+    }
+}
+
+// Hierarchical Inheritance
+class Cat extends Animal {
+
+    void meow() {
+        System.out.println("Cat meows");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Puppy p1 = new Puppy();
+
+        p1.eat();   // from Animal
+        p1.bark();  // from Dog
+        p1.weep();  // own method
+
+        System.out.println("------");
+
+        Cat c1 = new Cat();
+
+        c1.eat();   // from Animal
+        c1.meow();  // own method
+    }
+}
+
