@@ -214,7 +214,7 @@ Date : 21/04/2025
 
 Day #03
 
-Topic : Encapsulation (Basic Example), Encapsulation + Access Modifiers (Full Example)
+Topic : Person Class with Getter and Setter, Person Class with Validation
 
 Source Code : https://github.com/khalidhasan4a-ux/IT24013___30-Days-Course-Plan/tree/main/Day%2003
 
@@ -223,99 +223,112 @@ Video : https://www.youtube.com/watch?v=HZUUYnIZO_0
 
 Example #01
 
-// Code 1: Encapsulation Example
+class Person {
 
-class BankAccount {
+    // Private attributes
+    private String name;
+    private int age;
 
-    // Private variable (hidden data)
-    private double balance;
-
-    // Setter method (deposit money)
-    public void deposit(double amount) {
-        if (amount > 0) {
-            balance = balance + amount;
-        }
+    // Constructor
+    Person(String name, int age){
+        this.name = name;
+        this.age = age;
     }
 
-    // Getter method (check balance)
-    public double getBalance() {
-        return balance;
+    // Getter methods
+    String getName(){
+        return name;
+    }
+
+    int getAge(){
+        return age;
+    }
+
+    // Setter methods
+    void setName(String name){
+        this.name = name;
+    }
+
+    void setAge(int age){
+        this.age = age;
     }
 }
 
-public class Main {
+
+public class IT24013 {
+
     public static void main(String[] args) {
 
-        BankAccount acc = new BankAccount();
+        Person p = new Person("Khalid",20);
 
-        acc.deposit(1000); // add money
+        System.out.println("Name: " + p.getName());
+        System.out.println("Age: " + p.getAge());
 
-        System.out.println("Balance: " + acc.getBalance());
+        p.setName("Jadid");
+        p.setAge(23);
+
+        System.out.println("Updated Name: " + p.getName());
+        System.out.println("Updated Age: " + p.getAge());
     }
 }
-
 
 
 Example #02
 
-// Code 2: Encapsulation + Access Modifiers
+class Person {
 
-class Student {
+    private String name;
+    private int age;
 
-    private String name;     // private
-    private int age;         // private
-
-    public String university;    // public
-    protected String city;   // protected
-    String country;          // default
-
-    // Setter
-    public void setName(String name) {
+    Person(String name,int age){
         this.name = name;
+        this.age = age;
     }
 
-    public void setAge(int age) {
-        if (age > 0) {
-            this.age = age;
-        }
-    }
-
-    // Getter
-    public String getName() {
+    String getName(){
         return name;
     }
 
-    public int getAge() {
+    int getAge(){
         return age;
     }
 
-    // Method
-    public void display() {
-        System.out.println("Name: " + name);
-        System.out.println("Age: " + age);
-        System.out.println("University: " + university);
-        System.out.println("City: " + city);
-        System.out.println("Country: " + country);
+    void setName(String name){
+        this.name = name;
+    }
+
+    void setAge(int age){
+
+        if(age >= 0){
+            this.age = age;
+        }
+        else{
+            System.out.println("Age cannot be negative.");
+        }
     }
 }
 
-public class Main {
+
+public class IT24013 {
+
     public static void main(String[] args) {
 
-        Student s1 = new Student();
+        Person p = new Person("Khalid",20);
 
-        // Using setters
-        s1.setName("Khalid");
-        s1.setAge(23);
+        System.out.println("Name: " + p.getName());
+        System.out.println("Age: " + p.getAge());
 
-        // Direct access (allowed ones)
-        s1.university = "MBSTU";
-        s1.city = "Tangail";
-        s1.country = "Bangladesh";
+        p.setAge(-5);   // Invalid value
 
-        s1.display();
+        p.setAge(23);   // Valid value
+
+        System.out.println("Updated Age: " + p.getAge());
     }
 }
+
+
+
+
 
 
 
