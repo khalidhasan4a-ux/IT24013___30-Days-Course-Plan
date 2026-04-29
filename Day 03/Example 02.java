@@ -36,14 +36,14 @@ public class IT24013 {
 
     public static void main(String[] args) {
 
-        Person p = new Person("Rahim",20);
+        Person p = new Person("Khalid",20);
 
         System.out.println("Name: " + p.getName());
         System.out.println("Age: " + p.getAge());
 
         p.setAge(-5);   // Invalid value
 
-        p.setAge(22);   // Valid value
+        p.setAge(23);   // Valid value
 
         System.out.println("Updated Age: " + p.getAge());
     }
