@@ -1,4 +1,4 @@
-Date : 20/04/2025
+Date : 19/04/2025
 
 Day #01
 
@@ -96,7 +96,7 @@ public class Main {
 
 
 
-Date : 21/04/2025
+Date : 20/04/2025
 
 Day #02
 
@@ -201,7 +201,7 @@ public class Main {
 
 
 
-Date : 22/04/2025
+Date : 21/04/2025
 
 Day #03
 
@@ -310,7 +310,7 @@ public class Main {
 
 
 
-Date : 23/04/2025
+Date : 22/04/2025
 
 Day #04
 
@@ -394,7 +394,7 @@ public class Main {
 
 
 
-Date : 24/04/2025
+Date : 23/04/2025
 
 Day #05
 
@@ -504,7 +504,7 @@ public class Main {
 
 
 
-Date : 25/04/2025
+Date : 24/04/2025
 
 Day #06
 
@@ -578,7 +578,7 @@ public class Main {
 
 
 
-Date : 26/04/2025
+Date : 25/04/2025
 
 Day #07
 
@@ -659,7 +659,7 @@ public class Main {
 
 
 
-Date : 27/04/2025
+Date : 26/04/2025
 
 Day #08
 
@@ -732,13 +732,13 @@ public class Main {
 
 
 
-Date : 28/04/2025
+Date : 27/04/2025
 
 Day #09
 
 Topic : ArrayList + LinkedList, HashSet + HashMap
 
-Source Code : 
+Source Code : https://github.com/khalidhasan4a-ux/IT24013___30-Days-Course-Plan/tree/main/Day%2009
 
 Video : https://www.youtube.com/watch?v=TDHaeHAlPFg&list=PLSGubLIO9kuDMrAqU8bVQx4Zv-E-6AEnj&index=10
 
@@ -813,16 +813,66 @@ public class Main {
 }
 
 
-Date : 29/04/2025
+Date : 28/04/2025
 
 Day #10
 
-Topic : 
+Topic : ArrayList Example, LinkedList Example
 
 Source Code : 
 
 Video : 
 
 Example #01
+import java.util.ArrayList;
 
+public class Main {
+    public static void main(String[] args) {
 
+        ArrayList<String> students = new ArrayList<>();
+
+        // Adding elements
+        students.add("Jadid");
+        students.add("Rahim");
+        students.add("Karim");
+        students.add("Jadid"); // duplicate allowed
+
+        // Display all elements
+        System.out.println("Student List:");
+        for(String name : students) {
+            System.out.println(name);
+        }
+
+        System.out.println("------");
+
+        // Access by index
+        System.out.println("Element at index 1: " + students.get(1));
+    }
+}
+
+Example #02
+import java.util.LinkedList;
+
+public class Main {
+    public static void main(String[] args) {
+
+        LinkedList<String> subjects = new LinkedList<>();
+
+        // Add elements
+        subjects.add("Java");
+        subjects.add("Database");
+        subjects.add("Networking");
+
+        // Insert element
+        subjects.addFirst("C Programming");
+
+        // Remove element
+        subjects.remove("Database");
+
+        System.out.println("Subject List:");
+
+        for(String sub : subjects) {
+            System.out.println(sub);
+        }
+    }
+}
