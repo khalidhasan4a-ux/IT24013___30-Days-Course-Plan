@@ -34,13 +34,13 @@ public class IT24013 {
 
     public static void main(String[] args) {
 
-        Person p = new Person("Alice",30);
+        Person p = new Person("Khalid",00);
 
         System.out.println("Name: " + p.getName());
         System.out.println("Age: " + p.getAge());
 
-        p.setName("Bob");
-        p.setAge(25);
+        p.setName("Jadid");
+        p.setAge(23);
 
         System.out.println("Updated Name: " + p.getName());
         System.out.println("Updated Age: " + p.getAge());
