@@ -336,7 +336,7 @@ Date : 22/04/2025
 
 Day #04
 
-Topic : Default / No-Argument Constructor, Parameterized Constructor
+Topic : Dog Class (Default Constructor + Parameterized Constructor), Car Class (No-arg Constructor)
 
 Source Code : https://github.com/khalidhasan4a-ux/IT24013___30-Days-Course-Plan/tree/main/Day%2004
 
@@ -347,71 +347,70 @@ Video : https://www.youtube.com/watch?v=acfR5vRTZvc
 Example #01
 
 
-class Student {
+class Dog {
 
     String name;
-    int age;
 
-    // No-argument constructor
-    Student() {
-        name = "Khalid";
-        age = 23;
+    // Default Constructor
+    Dog(){
+        name = "Unknown";
     }
 
-    void display() {
-        System.out.println("Name: " + name);
-        System.out.println("Age: " + age);
+    // Parameterized Constructor
+    Dog(String dogName){
+        name = dogName;
+    }
+
+    void display(){
+        System.out.println("Dog's Name: " + name);
     }
 }
 
-public class Main {
+
+public class IT24013 {
+
     public static void main(String[] args) {
 
-        // Constructor automatically called
-        Student s1 = new Student();
+        Dog dog1 = new Dog();          // Default constructor
+        Dog dog2 = new Dog("Tommy");   // Parameterized constructor
 
-        s1.display();
+        dog1.display();
+        dog2.display();
     }
 }
-
 
 
 
 Example #02
 
 
-// Code 2: Parameterized Constructor
-
 class Car {
 
-    String color;
-    int speed;
+    String model;
+    int year;
 
-    // Parameterized constructor
-    Car(String c, int s) {
-        color = c;
-        speed = s;
+    // No-arg Constructor
+    Car(){
+        model = "Toyota";
+        year = 2026;
     }
 
-    void display() {
-        System.out.println("Color: " + color);
-        System.out.println("Speed: " + speed);
+    void display(){
+        System.out.println("Car Model: " + model);
+        System.out.println("Car Year: " + year);
     }
 }
 
-public class Main {
+
+public class IT24013 {
+
     public static void main(String[] args) {
 
-        // Passing values during object creation
-        Car c1 = new Car("Red", 120);
-        Car c2 = new Car("Blue", 100);
+        Car myCar = new Car();
 
-        c1.display();
-        System.out.println("------");
-        c2.display();
+        myCar.display();
     }
 }
-
 
 
 
