@@ -1,24 +1,23 @@
-class Outer {
+class OuterClass {
 
-    static String university = "ICT Department";
+    static int staticVariable = 20;
 
-    // Static nested class
-    static class Inner {
+    static class StaticNestedClass {
 
-        void display() {
-
-            // Access static member
-            System.out.println("University: " + university);
+        void show(){
+            System.out.println("Static variable value: " + staticVariable);
         }
     }
 }
 
-public class Main {
+
+public class IT24013 {
+
     public static void main(String[] args) {
 
-        // No outer object needed
-        Outer.Inner obj = new Outer.Inner();
+        OuterClass.StaticNestedClass nest =
+                new OuterClass.StaticNestedClass();
 
-        obj.display();
+        nest.show();
     }
 }
