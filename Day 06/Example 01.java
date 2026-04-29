@@ -1,22 +1,31 @@
-class MathOperation {
+class MathOperations {
 
-    // Method 1
-    void add(int a, int b) {
-        System.out.println("Sum = " + (a + b));
+    int add(int a, int b){
+        return a + b;
     }
 
-    // Method 2 (same name, different parameters)
-    void add(int a, int b, int c) {
-        System.out.println("Sum = " + (a + b + c));
+    int add(int a, int b, int c){
+        return a + b + c;
+    }
+
+    double add(double a, double b){
+        return a + b;
     }
 }
 
-public class Main {
+
+public class IT24013 {
+
     public static void main(String[] args) {
 
-        MathOperation obj = new MathOperation();
+        MathOperations math = new MathOperations();
 
-        obj.add(5, 10);
-        obj.add(5, 10, 15);
+        System.out.println("Sum of 2 and 3: " + math.add(2,3));
+
+        System.out.println("Sum of 2,3 and 4: " +
+                           math.add(2,3,4));
+
+        System.out.println("Sum of 2.5 and 1.5: " +
+                           math.add(2.5,1.5));
     }
 }
