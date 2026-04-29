@@ -1,29 +1,27 @@
 class Car {
 
-    String color;
-    int speed;
+    String model;
+    int year;
 
-    // Parameterized constructor
-    Car(String c, int s) {
-        color = c;
-        speed = s;
+    // No-arg Constructor
+    Car(){
+        model = "Toyota";
+        year = 2026;
     }
 
-    void display() {
-        System.out.println("Color: " + color);
-        System.out.println("Speed: " + speed);
+    void display(){
+        System.out.println("Car Model: " + model);
+        System.out.println("Car Year: " + year);
     }
 }
 
-public class Main {
+
+public class IT24013 {
+
     public static void main(String[] args) {
 
-        // Passing values during object creation
-        Car c1 = new Car("Red", 120);
-        Car c2 = new Car("Blue", 100);
+        Car myCar = new Car();
 
-        c1.display();
-        System.out.println("------");
-        c2.display();
+        myCar.display();
     }
 }
