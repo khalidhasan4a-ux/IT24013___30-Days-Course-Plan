@@ -415,11 +415,14 @@ public class IT24013 {
 
 
 
+
+
+
 Date : 23/04/2025
 
 Day #05
 
-Topic : Single Inheritance + Method Overriding, Multilevel + Hierarchical Inheritance
+Topic : Single Inheritance + Multilevel Inheritance, Method Overriding (Polymorphism)
 
 Source Code : https://github.com/khalidhasan4a-ux/IT24013___30-Days-Course-Plan/tree/main/Day%2005
 
@@ -429,41 +432,41 @@ Video : https://www.youtube.com/watch?v=j_VA2Rp6jM0
 Example #01
 
 
-// Code 1: Single Inheritance
-
 class Animal {
 
-    String name = "Animal";
+    String name;
 
-    void eat() {
-        System.out.println(name + " is eating");
-    }
-
-    void sound() {
-        System.out.println("Animal makes sound");
+    void eat(){
+        System.out.println(name + " is eating.");
     }
 }
 
-// Dog inherits Animal
 class Dog extends Animal {
 
-    // Method overriding
-    @Override
-    void sound() {
-        System.out.println("Dog barks");
+    void bark(){
+        System.out.println(name + " says woof!");
     }
 }
 
-public class Main {
+class Puppy extends Dog {
+
+    void weep(){
+        System.out.println(name + " is weeping.");
+    }
+}
+
+
+public class IT24013 {
+
     public static void main(String[] args) {
 
-        Dog d1 = new Dog();
+        Puppy p = new Puppy();
 
-        // Inherited method
-        d1.eat();
+        p.name = "Buddy";
 
-        // Overridden method
-        d1.sound();
+        p.eat();
+        p.bark();
+        p.weep();
     }
 }
 
@@ -473,55 +476,36 @@ public class Main {
 Example #02
 
 
-// Code 2: Multilevel and Hierarchical Inheritance
-
 class Animal {
 
-    void eat() {
-        System.out.println("Animal eats food");
+    void sound(){
+        System.out.println("Animal makes a sound");
     }
 }
 
-// Multilevel Inheritance
 class Dog extends Animal {
 
-    void bark() {
+    @Override
+    void sound(){
         System.out.println("Dog barks");
     }
 }
 
-class Puppy extends Dog {
 
-    void weep() {
-        System.out.println("Puppy weeps");
-    }
-}
+public class IT24013 {
 
-// Hierarchical Inheritance
-class Cat extends Animal {
-
-    void meow() {
-        System.out.println("Cat meows");
-    }
-}
-
-public class Main {
     public static void main(String[] args) {
 
-        Puppy p1 = new Puppy();
+        Animal a1 = new Animal();
+        Animal a2 = new Dog();
 
-        p1.eat();   // from Animal
-        p1.bark();  // from Dog
-        p1.weep();  // own method
+        a1.sound();
 
-        System.out.println("------");
-
-        Cat c1 = new Cat();
-
-        c1.eat();   // from Animal
-        c1.meow();  // own method
+        a2.sound();
     }
 }
+
+
 
 
 
