@@ -10,86 +10,90 @@ Video : https://www.youtube.com/watch?v=s2hoJkIz3RQ
 
 Example #01
 
-// Code 1: Class, Object, Properties, Methods
+class Car {
 
-class Student {
-    // Properties (Attributes)
-    String name;
-    int age;
+    // Properties 
+    String brand;
+    String color;
+    int speed;
+
+    // Constructor
+    Car(String b, String c, int s) {
+        brand = b;
+        color = c;
+        speed = s;
+    }
 
     // Method
     void displayInfo() {
-        System.out.println("Name: " + name);
-        System.out.println("Age: " + age);
+        System.out.println("Car Brand : " + brand);
+        System.out.println("Car Color : " + color);
+        System.out.println("Car Speed : " + speed + " km/h");
     }
 }
 
-public class Main {
+// Main Class
+public class IT24013 {
+
     public static void main(String[] args) {
 
-        // Creating object
-        Student s1 = new Student();
+        // Creating Objects
+        Car car1 = new Car("Toyota", "Red", 120);
+        Car car2 = new Car("BMW", "Black", 180);
 
-        // Assigning values
-        s1.name = "Jadid";
-        s1.age = 20;
+        System.out.println("Car 1 Information:");
+        car1.displayInfo();
 
-        // Calling method
-        s1.displayInfo();
+        System.out.println();
+
+        System.out.println("Car 2 Information:");
+        car2.displayInfo();
     }
 }
 
 
 Example #02
 
-// Code 2: Inheritance, Encapsulation, Polymorphism
+class Car {
 
-class Animal {
+    String brand;
 
-    // Encapsulation (private variable)
-    private String name;
-
-    // Setter
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    // Getter
-    public String getName() {
-        return name;
+    // Constructor
+    Car(String brand) {
+        this.brand = brand;
     }
 
     // Method
-    void sound() {
-        System.out.println("Animal makes sound");
+    void start() {
+        System.out.println(brand + " Car Starts.");
     }
 }
 
-// Inheritance
-class Dog extends Animal {
+// Child Class 
+class SportsCar extends Car {
 
-    // Polymorphism (method overriding)
-    @Override
-    void sound() {
-        System.out.println("Dog barks");
+    SportsCar(String brand) {
+        super(brand);
+    }
+
+    // Polymorphism (Method Overriding)
+    void start() {
+        System.out.println(brand + " Sports Car Starts Very Fast!");
     }
 }
 
-public class Main {
+// Main Class
+public class IT24013 {
+
     public static void main(String[] args) {
 
-        Dog d1 = new Dog();
+        Car car1 = new Car("Toyota");
+        Car car2 = new SportsCar("Ferrari");
 
-        // Using encapsulation
-        d1.setName("Tommy");
-
-        System.out.println("Dog Name: " + d1.getName());
-
-        // Polymorphism
-        d1.sound();
+        car1.start();
+        car2.start();
     }
 }
-
 
 
 
