@@ -1,45 +1,40 @@
-class Animal {
+class Car {
 
-    // Encapsulation 
-    private String name;
+    String brand;
 
-    // Setter
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    // Getter
-    public String getName() {
-        return name;
+    // Constructor
+    Car(String brand) {
+        this.brand = brand;
     }
 
     // Method
-    void sound() {
-        System.out.println("Animal makes sound");
+    void start() {
+        System.out.println(brand + " Car Starts.");
     }
 }
 
-// Inheritance
-class Dog extends Animal {
+// Child Class
+class SportsCar extends Car {
 
-    // Polymorphism (method overriding)
-    @Override
-    void sound() {
-        System.out.println("Dog barks");
+    SportsCar(String brand) {
+        super(brand);
+    }
+
+    // Polymorphism 
+    void start() {
+        System.out.println(brand + " Sports Car Starts Very Fast!");
     }
 }
 
-public class Main {
+// Main Class
+public class IT24013 {
+
     public static void main(String[] args) {
 
-        Dog d1 = new Dog();
+        Car car1 = new Car("Toyota");
+        Car car2 = new SportsCar("Ferrari");
 
-        // Using encapsulation
-        d1.setName("Tommy");
-
-        System.out.println("Dog Name: " + d1.getName());
-
-        // Polymorphism
-        d1.sound();
+        car1.start();
+        car2.start();
     }
 }
