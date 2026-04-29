@@ -1,56 +1,50 @@
-class Student {
+class Person {
 
-    private String name;     // private
-    private int age;         // private
+    private String name;
+    private int age;
 
-    public String university;    // public
-    protected String city;   // protected
-    String country;          // default
-
-    // Setter
-    public void setName(String name) {
+    Person(String name,int age){
         this.name = name;
+        this.age = age;
     }
 
-    public void setAge(int age) {
-        if (age > 0) {
-            this.age = age;
-        }
-    }
-
-    // Getter
-    public String getName() {
+    String getName(){
         return name;
     }
 
-    public int getAge() {
+    int getAge(){
         return age;
     }
 
-    // Method
-    public void display() {
-        System.out.println("Name: " + name);
-        System.out.println("Age: " + age);
-        System.out.println("University: " + university);
-        System.out.println("City: " + city);
-        System.out.println("Country: " + country);
+    void setName(String name){
+        this.name = name;
+    }
+
+    void setAge(int age){
+
+        if(age >= 0){
+            this.age = age;
+        }
+        else{
+            System.out.println("Age cannot be negative.");
+        }
     }
 }
 
-public class Main {
+
+public class IT24013 {
+
     public static void main(String[] args) {
 
-        Student s1 = new Student();
+        Person p = new Person("Rahim",20);
 
-        // Using setters
-        s1.setName("Khalid");
-        s1.setAge(23);
+        System.out.println("Name: " + p.getName());
+        System.out.println("Age: " + p.getAge());
 
-        // Direct access (allowed ones)
-        s1.university = "MBSTU";
-        s1.city = "Tangail";
-        s1.country = "Bangladesh";
+        p.setAge(-5);   // Invalid value
 
-        s1.display();
+        p.setAge(22);   // Valid value
+
+        System.out.println("Updated Age: " + p.getAge());
     }
 }
