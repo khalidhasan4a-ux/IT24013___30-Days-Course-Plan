@@ -1,27 +1,24 @@
-class Outer {
+class OuterClass {
 
-    String message = "Hello from Outer Class";
+    int outerVariable = 10;
 
-    // Inner Class
-    class Inner {
+    class InnerClass {
 
-        void showMessage() {
-
-            // Access outer class variable
-            System.out.println(message);
+        void display(){
+            System.out.println("Outer variable value: " + outerVariable);
         }
     }
 }
 
-public class Main {
+
+public class IT24013 {
+
     public static void main(String[] args) {
 
-        // Create outer class object
-        Outer obj = new Outer();
+        OuterClass outer = new OuterClass();
 
-        // Create inner class object
-        Outer.Inner in = obj.new Inner();
+        OuterClass.InnerClass inner = outer.new InnerClass();
 
-        in.showMessage();
+        inner.display();
     }
 }
