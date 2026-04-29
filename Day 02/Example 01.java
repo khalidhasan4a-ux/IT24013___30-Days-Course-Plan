@@ -1,38 +1,52 @@
-class Student {
+class Car {
 
-    public String name;        // Public (anywhere access)
-    private int age;           // Private (only inside class)
-    protected String university;   // Protected (same package + subclass)
-    String city;               // Default (same package)
+    // Default Access
+    String model;
 
-    // Setter for private variable
-    public void setAge(int age) {
-        this.age = age;
+    // Private Access
+    private String color;
+
+    // Protected Access
+    protected int year;
+
+    // Static Variable
+    static int numberOfCars = 0;
+
+    // Constructor
+    Car(String m, String c, int y){
+        model = m;
+        color = c;
+        year = y;
+        numberOfCars++;
     }
 
-    // Getter for private variable
-    public int getAge() {
-        return age;
+    void displayInfo(){
+        System.out.println("Car Model: " + model);
+        System.out.println("Car Color: " + color);
+        System.out.println("Car Year: " + year);
     }
 
-    public void display() {
-        System.out.println("Name: " + name);
-        System.out.println("Age: " + age);
-        System.out.println("University: " + university);
-        System.out.println("City: " + city);
+    static void displayCount(){
+        System.out.println("Total Cars: " + numberOfCars);
     }
 }
 
-public class Main {
+
+public class IT24013 {
+
     public static void main(String[] args) {
 
-        Student s1 = new Student();
+        Car car1 = new Car("Toyota", "Red", 2020);
+        Car car2 = new Car("BMW", "Black", 2022);
 
-        s1.name = "Khalid";     // public
-        s1.setAge(23);         // private via setter
-        s1.university = "MBSTU"; // protected
-        s1.city = "Tangail";     // default
+        car1.displayInfo();
 
-        s1.display();
+        System.out.println();
+
+        car2.displayInfo();
+
+        System.out.println();
+
+        Car.displayCount();
     }
 }
