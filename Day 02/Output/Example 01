@@ -1,6 +1,9 @@
-Name: Khalid
-Age: 23
-University: MBSTU
-City: Tangail
+Car Model: Toyota
+Car Color: Red
+Car Year: 2020
 
-=== Code Execution Successful ===
+Car Model: BMW
+Car Color: Black
+Car Year: 2022
+
+Total Cars: 2
