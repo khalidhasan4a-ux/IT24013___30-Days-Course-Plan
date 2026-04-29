@@ -1,27 +1,37 @@
 class Animal {
 
-    void sound() {
-        System.out.println("Animal makes sound");
+    void sound(){
+        System.out.println("Animal makes a sound");
     }
 }
 
 class Dog extends Animal {
 
     @Override
-    void sound() {
+    void sound(){
         System.out.println("Dog barks");
     }
 }
 
-public class Main {
+class Cat extends Animal {
+
+    @Override
+    void sound(){
+        System.out.println("Cat meows");
+    }
+}
+
+
+public class IT24013 {
+
     public static void main(String[] args) {
 
-        Animal a;
+        Animal myAnimal;
 
-        // Parent reference, child object
-        a = new Dog();
+        myAnimal = new Dog();
+        myAnimal.sound();
 
-        // Runtime decides which method runs
-        a.sound();
+        myAnimal = new Cat();
+        myAnimal.sound();
     }
 }
