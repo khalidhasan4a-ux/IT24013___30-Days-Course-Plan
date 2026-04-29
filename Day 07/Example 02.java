@@ -1,27 +1,27 @@
-interface Vehicle {
+abstract class Shape {
 
-    // Abstract methods
-    void start();
-    void stop();
-}
+    abstract void draw();
 
-class Car implements Vehicle {
-
-    public void start() {
-        System.out.println("Car starts");
-    }
-
-    public void stop() {
-        System.out.println("Car stops");
+    void display(){
+        System.out.println("This is a shape.");
     }
 }
 
-public class Main {
+class Circle extends Shape {
+
+    void draw(){
+        System.out.println("Drawing Circle");
+    }
+}
+
+
+public class IT24013 {
+
     public static void main(String[] args) {
 
-        Car c1 = new Car();
+        Shape shape = new Circle();
 
-        c1.start();
-        c1.stop();
+        shape.draw();
+        shape.display();
     }
 }
