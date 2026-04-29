@@ -1,7 +1,4 @@
 Name: Khalid
-Age: 23
-University: MBSTU
-City: Tangail
-Country: Bangladesh
-
-=== Code Execution Successful ===
+Age: 20
+Age cannot be negative.
+Updated Age: 23
