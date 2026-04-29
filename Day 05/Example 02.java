@@ -1,47 +1,28 @@
 class Animal {
 
-    void eat() {
-        System.out.println("Animal eats food");
+    void sound(){
+        System.out.println("Animal makes a sound");
     }
 }
 
-// Multilevel Inheritance
 class Dog extends Animal {
 
-    void bark() {
+    @Override
+    void sound(){
         System.out.println("Dog barks");
     }
 }
 
-class Puppy extends Dog {
 
-    void weep() {
-        System.out.println("Puppy weeps");
-    }
-}
+public class IT24013 {
 
-// Hierarchical Inheritance
-class Cat extends Animal {
-
-    void meow() {
-        System.out.println("Cat meows");
-    }
-}
-
-public class Main {
     public static void main(String[] args) {
 
-        Puppy p1 = new Puppy();
+        Animal a1 = new Animal();
+        Animal a2 = new Dog();
 
-        p1.eat();   // from Animal
-        p1.bark();  // from Dog
-        p1.weep();  // own method
+        a1.sound();
 
-        System.out.println("------");
-
-        Cat c1 = new Cat();
-
-        c1.eat();   // from Animal
-        c1.meow();  // own method
+        a2.sound();
     }
 }
