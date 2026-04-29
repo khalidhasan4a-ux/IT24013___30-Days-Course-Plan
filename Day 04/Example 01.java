@@ -1,26 +1,31 @@
-class Student {
+class Dog {
 
     String name;
-    int age;
 
-    // No-argument constructor
-    Student() {
-        name = "Khalid";
-        age = 23;
+    // Default Constructor
+    Dog(){
+        name = "Unknown";
     }
 
-    void display() {
-        System.out.println("Name: " + name);
-        System.out.println("Age: " + age);
+    // Parameterized Constructor
+    Dog(String dogName){
+        name = dogName;
+    }
+
+    void display(){
+        System.out.println("Dog's Name: " + name);
     }
 }
 
-public class Main {
+
+public class IT24013 {
+
     public static void main(String[] args) {
 
-        // Constructor automatically called
-        Student s1 = new Student();
+        Dog dog1 = new Dog();          // Default constructor
+        Dog dog2 = new Dog("Tommy");   // Parameterized constructor
 
-        s1.display();
+        dog1.display();
+        dog2.display();
     }
 }
