@@ -1,39 +1,33 @@
+final class Vehicle {
+
+    final int maxSpeed = 120;
+
+    final void displayMaxSpeed(){
+        System.out.println("Max Speed: " + maxSpeed);
+    }
+}
+
 abstract class Shape {
 
-    // Abstract method (must be implemented)
     abstract void draw();
-
-    // Static method
-    static void info() {
-        System.out.println("This is Shape class");
-    }
 }
 
 class Circle extends Shape {
 
-    final double PI = 3.1416; // Final (constant)
-
-    double radius;
-
-    Circle(double radius) {
-        this.radius = radius;
-    }
-
-    // Implement abstract method
-    void draw() {
+    void draw(){
         System.out.println("Drawing Circle");
-        double area = PI * radius * radius;
-        System.out.println("Area: " + area);
     }
 }
 
-public class Main {
+
+public class IT24013 {
+
     public static void main(String[] args) {
 
-        // Static method call
-        Shape.info();
+        Vehicle v = new Vehicle();
+        v.displayMaxSpeed();
 
-        Circle c1 = new Circle(5);
-        c1.draw();
+        Circle c = new Circle();
+        c.draw();
     }
 }
