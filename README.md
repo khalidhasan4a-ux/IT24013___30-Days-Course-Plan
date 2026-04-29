@@ -113,44 +113,56 @@ Video : https://www.youtube.com/watch?v=lWFzm8qIR1c
 
 Example #01
 
-// Code 1: Access Modifiers Example
+class Car {
 
-class Student {
+    // Default Access
+    String model;
 
-    public String name;        // Public (anywhere access)
-    private int age;           // Private (only inside class)
-    protected String school;   // Protected (same package + subclass)
-    String city;               // Default (same package)
+    // Private Access
+    private String color;
 
-    // Setter for private variable
-    public void setAge(int age) {
-        this.age = age;
+    // Protected Access
+    protected int year;
+
+    // Static Variable
+    static int numberOfCars = 0;
+
+    // Constructor
+    Car(String m, String c, int y){
+        model = m;
+        color = c;
+        year = y;
+        numberOfCars++;
     }
 
-    // Getter for private variable
-    public int getAge() {
-        return age;
+    void displayInfo(){
+        System.out.println("Car Model: " + model);
+        System.out.println("Car Color: " + color);
+        System.out.println("Car Year: " + year);
     }
 
-    public void display() {
-        System.out.println("Name: " + name);
-        System.out.println("Age: " + age);
-        System.out.println("School: " + school);
-        System.out.println("City: " + city);
+    static void displayCount(){
+        System.out.println("Total Cars: " + numberOfCars);
     }
 }
 
-public class Main {
+
+public class IT24013 {
+
     public static void main(String[] args) {
 
-        Student s1 = new Student();
+        Car car1 = new Car("Toyota", "Red", 2020);
+        Car car2 = new Car("BMW", "Black", 2022);
 
-        s1.name = "Jadid";     // public
-        s1.setAge(20);         // private via setter
-        s1.school = "XYZ School"; // protected
-        s1.city = "Dhaka";     // default
+        car1.displayInfo();
 
-        s1.display();
+        System.out.println();
+
+        car2.displayInfo();
+
+        System.out.println();
+
+        Car.displayCount();
     }
 }
 
@@ -159,47 +171,40 @@ public class Main {
 Example #02
 
 
-// Code 2: static, final, abstract Example
+final class Vehicle {
+
+    final int maxSpeed = 120;
+
+    final void displayMaxSpeed(){
+        System.out.println("Max Speed: " + maxSpeed);
+    }
+}
 
 abstract class Shape {
 
-    // Abstract method (must be implemented)
     abstract void draw();
-
-    // Static method
-    static void info() {
-        System.out.println("This is Shape class");
-    }
 }
 
 class Circle extends Shape {
 
-    final double PI = 3.1416; // Final (constant)
-
-    double radius;
-
-    Circle(double radius) {
-        this.radius = radius;
-    }
-
-    // Implement abstract method
-    void draw() {
+    void draw(){
         System.out.println("Drawing Circle");
-        double area = PI * radius * radius;
-        System.out.println("Area: " + area);
     }
 }
 
-public class Main {
+
+public class IT24013 {
+
     public static void main(String[] args) {
 
-        // Static method call
-        Shape.info();
+        Vehicle v = new Vehicle();
+        v.displayMaxSpeed();
 
-        Circle c1 = new Circle(5);
-        c1.draw();
+        Circle c = new Circle();
+        c.draw();
     }
 }
+
 
 
 
