@@ -692,64 +692,61 @@ Video : https://www.youtube.com/watch?v=lsJ9QjJPbx8&list=PLSGubLIO9kuDMrAqU8bVQx
 
 Example #01
 
-// Code 1: Non-Static Inner Class
+class OuterClass {
 
-class Outer {
+    int outerVariable = 10;
 
-    String message = "Hello from Outer Class";
+    class InnerClass {
 
-    // Inner Class
-    class Inner {
-
-        void showMessage() {
-
-            // Access outer class variable
-            System.out.println(message);
+        void display(){
+            System.out.println("Outer variable value: " + outerVariable);
         }
     }
 }
 
-public class Main {
+
+public class IT24013 {
+
     public static void main(String[] args) {
 
-        // Create outer class object
-        Outer obj = new Outer();
+        OuterClass outer = new OuterClass();
 
-        // Create inner class object
-        Outer.Inner in = obj.new Inner();
+        OuterClass.InnerClass inner = outer.new InnerClass();
 
-        in.showMessage();
+        inner.display();
     }
 }
+
+
+
 
 Example #02
 
-// Code 2: Static Nested Class
+class OuterClass {
 
-class Outer {
+    static int staticVariable = 20;
 
-    static String university = "ICT Department";
+    static class StaticNestedClass {
 
-    // Static nested class
-    static class Inner {
-
-        void display() {
-
-            // Access static member
-            System.out.println("University: " + university);
+        void show(){
+            System.out.println("Static variable value: " + staticVariable);
         }
     }
 }
 
-public class Main {
+
+public class IT24013 {
+
     public static void main(String[] args) {
 
-        // No outer object needed
-        Outer.Inner obj = new Outer.Inner();
+        OuterClass.StaticNestedClass nest =
+                new OuterClass.StaticNestedClass();
 
-        obj.display();
+        nest.show();
     }
 }
+
+
 
 
 
