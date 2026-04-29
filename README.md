@@ -819,9 +819,9 @@ Day #10
 
 Topic : ArrayList Example, LinkedList Example
 
-Source Code : 
+Source Code : https://github.com/khalidhasan4a-ux/IT24013___30-Days-Course-Plan/tree/main/Day%2010
 
-Video : 
+Video : https://www.youtube.com/watch?v=q-5D9Z9BCVI&list=PLSGubLIO9kuDMrAqU8bVQx4Zv-E-6AEnj&index=12
 
 Example #01
 import java.util.ArrayList;
