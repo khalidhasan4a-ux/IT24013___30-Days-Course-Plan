@@ -730,3 +730,99 @@ public class Main {
     }
 }
 
+
+
+Date : 28/04/2025
+
+Day #09
+
+Topic : ArrayList + LinkedList, HashSet + HashMap
+
+Source Code : 
+
+Video : https://www.youtube.com/watch?v=TDHaeHAlPFg&list=PLSGubLIO9kuDMrAqU8bVQx4Zv-E-6AEnj&index=10
+
+Example #01
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+
+public class Main {
+    public static void main(String[] args) {
+
+        // ArrayList
+        ArrayList<String> students = new ArrayList<>();
+
+        students.add("Jadid");
+        students.add("Rahim");
+        students.add("Jadid"); // duplicate allowed
+
+        System.out.println("ArrayList:");
+        for(String name : students) {
+            System.out.println(name);
+        }
+
+        System.out.println("------");
+
+        // LinkedList
+        LinkedList<String> subjects = new LinkedList<>();
+
+        subjects.add("Java");
+        subjects.add("Database");
+        subjects.add("Networking");
+
+        System.out.println("LinkedList:");
+        for(String sub : subjects) {
+            System.out.println(sub);
+        }
+    }
+}
+
+
+Example #02
+
+import java.util.HashSet;
+import java.util.HashMap;
+
+public class Main {
+    public static void main(String[] args) {
+
+        // HashSet
+        HashSet<String> fruits = new HashSet<>();
+
+        fruits.add("Apple");
+        fruits.add("Banana");
+        fruits.add("Apple"); // duplicate ignored
+
+        System.out.println("HashSet:");
+        for(String item : fruits) {
+            System.out.println(item);
+        }
+
+        System.out.println("------");
+
+        // HashMap
+        HashMap<Integer,String> student = new HashMap<>();
+
+        student.put(101,"Jadid");
+        student.put(102,"Rahim");
+
+        System.out.println("HashMap:");
+        System.out.println(student);
+    }
+}
+
+
+Date : 29/04/2025
+
+Day #10
+
+Topic : 
+
+Source Code : 
+
+Video : 
+
+Example #01
+
+
