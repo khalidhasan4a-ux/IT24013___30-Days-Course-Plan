@@ -614,35 +614,35 @@ Video : https://www.youtube.com/watch?v=1SXyi3DK-88&list=PLSGubLIO9kuDMrAqU8bVQx
 Example #01
 
 
-// Code 1: Abstraction using Abstract Class
+interface Animal {
 
-abstract class Animal {
+    void sound();
+}
 
-    // Abstract method (no body)
-    abstract void sound();
+class Dog implements Animal {
 
-    // Normal method
-    void eat() {
-        System.out.println("Animal eats food");
+    public void sound(){
+        System.out.println("Bark");
     }
 }
 
-class Dog extends Animal {
+class Cat implements Animal {
 
-    // Implementing abstract method
-    @Override
-    void sound() {
-        System.out.println("Dog barks");
+    public void sound(){
+        System.out.println("Meow");
     }
 }
 
-public class Main {
+
+public class IT24013 {
+
     public static void main(String[] args) {
 
-        Dog d1 = new Dog();
+        Animal dog = new Dog();
+        Animal cat = new Cat();
 
-        d1.eat();
-        d1.sound();
+        dog.sound();
+        cat.sound();
     }
 }
 
@@ -650,33 +650,31 @@ public class Main {
 
 Example #02
 
-// Code 2: Interface Example
+abstract class Shape {
 
-interface Vehicle {
+    abstract void draw();
 
-    // Abstract methods
-    void start();
-    void stop();
-}
-
-class Car implements Vehicle {
-
-    public void start() {
-        System.out.println("Car starts");
-    }
-
-    public void stop() {
-        System.out.println("Car stops");
+    void display(){
+        System.out.println("This is a shape.");
     }
 }
 
-public class Main {
+class Circle extends Shape {
+
+    void draw(){
+        System.out.println("Drawing Circle");
+    }
+}
+
+
+public class IT24013 {
+
     public static void main(String[] args) {
 
-        Car c1 = new Car();
+        Shape shape = new Circle();
 
-        c1.start();
-        c1.stop();
+        shape.draw();
+        shape.display();
     }
 }
 
