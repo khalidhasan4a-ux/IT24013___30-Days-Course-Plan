@@ -1,29 +1,31 @@
-abstract class Animal {
+interface Animal {
 
-    // Abstract method (no body)
-    abstract void sound();
+    void sound();
+}
 
-    // Normal method
-    void eat() {
-        System.out.println("Animal eats food");
+class Dog implements Animal {
+
+    public void sound(){
+        System.out.println("Bark");
     }
 }
 
-class Dog extends Animal {
+class Cat implements Animal {
 
-    // Implementing abstract method
-    @Override
-    void sound() {
-        System.out.println("Dog barks");
+    public void sound(){
+        System.out.println("Meow");
     }
 }
 
-public class Main {
+
+public class IT24013 {
+
     public static void main(String[] args) {
 
-        Dog d1 = new Dog();
+        Animal dog = new Dog();
+        Animal cat = new Cat();
 
-        d1.eat();
-        d1.sound();
+        dog.sound();
+        cat.sound();
     }
 }
