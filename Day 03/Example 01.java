@@ -1,28 +1,48 @@
-class BankAccount {
+class Person {
 
-    // Private variable (hidden data)
-    private double balance;
+    // Private attributes
+    private String name;
+    private int age;
 
-    // Setter method (deposit money)
-    public void deposit(double amount) {
-        if (amount > 0) {
-            balance = balance + amount;
-        }
+    // Constructor
+    Person(String name, int age){
+        this.name = name;
+        this.age = age;
     }
 
-    // Getter method (check balance)
-    public double getBalance() {
-        return balance;
+    // Getter methods
+    String getName(){
+        return name;
+    }
+
+    int getAge(){
+        return age;
+    }
+
+    // Setter methods
+    void setName(String name){
+        this.name = name;
+    }
+
+    void setAge(int age){
+        this.age = age;
     }
 }
 
-public class Main {
+
+public class IT24013 {
+
     public static void main(String[] args) {
 
-        BankAccount acc = new BankAccount();
+        Person p = new Person("Alice",30);
 
-        acc.deposit(1000); // add money
+        System.out.println("Name: " + p.getName());
+        System.out.println("Age: " + p.getAge());
 
-        System.out.println("Balance: " + acc.getBalance());
+        p.setName("Bob");
+        p.setAge(25);
+
+        System.out.println("Updated Name: " + p.getName());
+        System.out.println("Updated Age: " + p.getAge());
     }
 }
