@@ -837,55 +837,77 @@ Source Code : https://github.com/khalidhasan4a-ux/IT24013___30-Days-Course-Plan/
 Video : https://www.youtube.com/watch?v=q-5D9Z9BCVI&list=PLSGubLIO9kuDMrAqU8bVQx4Zv-E-6AEnj&index=12
 
 Example #01
+
 import java.util.ArrayList;
 
-public class Main {
+public class IT24013 {
+
     public static void main(String[] args) {
 
-        ArrayList<String> students = new ArrayList<>();
-
-        // Adding elements
-        students.add("Jadid");
-        students.add("Rahim");
-        students.add("Karim");
-        students.add("Jadid"); // duplicate allowed
-
-        // Display all elements
-        System.out.println("Student List:");
-        for(String name : students) {
-            System.out.println(name);
-        }
-
-        System.out.println("------");
-
-        // Access by index
-        System.out.println("Element at index 1: " + students.get(1));
-    }
-}
-
-Example #02
-import java.util.LinkedList;
-
-public class Main {
-    public static void main(String[] args) {
-
-        LinkedList<String> subjects = new LinkedList<>();
+        // Create ArrayList
+        ArrayList<String> fruits = new ArrayList<>();
 
         // Add elements
-        subjects.add("Java");
-        subjects.add("Database");
-        subjects.add("Networking");
+        fruits.add("Apple");
+        fruits.add("Banana");
+        fruits.add("Cherry");
 
-        // Insert element
-        subjects.addFirst("C Programming");
+        // Access element
+        System.out.println("First fruit: " + fruits.get(0));
 
         // Remove element
-        subjects.remove("Database");
+        fruits.remove("Banana");
 
-        System.out.println("Subject List:");
-
-        for(String sub : subjects) {
-            System.out.println(sub);
-        }
+        // Print all elements
+        System.out.println("Fruits List: " + fruits);
     }
 }
+
+
+
+
+Example #02
+
+
+import java.util.LinkedList;
+
+public class IT24013 {
+
+    public static void main(String[] args) {
+
+        // Create LinkedList
+        LinkedList<String> colors = new LinkedList<>();
+
+        // Add elements
+        colors.add("Red");
+        colors.add("Green");
+        colors.add("Blue");
+
+        // Access element
+        System.out.println("First color: " + colors.get(0));
+
+        // Remove element
+        colors.remove("Green");
+
+        // Print all elements
+        System.out.println("Colors List: " + colors);
+    }
+}
+
+
+
+
+
+Date : 29/04/2025
+
+Day #11
+
+Topic : 
+
+Source Code : 
+
+Video : 
+
+Example #01
+
+
