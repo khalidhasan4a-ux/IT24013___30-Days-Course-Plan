@@ -1,33 +1,19 @@
 import java.util.ArrayList;
-import java.util.LinkedList;
+import java.util.List;
 
-public class Main {
+public class IT24013 {
+
     public static void main(String[] args) {
 
-        // ArrayList
-        ArrayList<String> students = new ArrayList<>();
+        List<String> fruits = new ArrayList<>();
 
-        students.add("Jadid");
-        students.add("Rahim");
-        students.add("Jadid"); // duplicate allowed
+        fruits.add("Apple");
+        fruits.add("Banana");
+        fruits.add("Cherry");
 
-        System.out.println("ArrayList:");
-        for(String name : students) {
-            System.out.println(name);
-        }
+        System.out.println("Fruits: " + fruits);
 
-        System.out.println("------");
-
-        // LinkedList
-        LinkedList<String> subjects = new LinkedList<>();
-
-        subjects.add("Java");
-        subjects.add("Database");
-        subjects.add("Networking");
-
-        System.out.println("LinkedList:");
-        for(String sub : subjects) {
-            System.out.println(sub);
-        }
+        String firstFruit = fruits.get(0);
+        System.out.println("First fruit: " + firstFruit);
     }
 }
