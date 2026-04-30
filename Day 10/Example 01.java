@@ -1,25 +1,24 @@
 import java.util.ArrayList;
 
-public class Main {
+public class IT24013 {
+
     public static void main(String[] args) {
 
-        ArrayList<String> students = new ArrayList<>();
+        // Create ArrayList
+        ArrayList<String> fruits = new ArrayList<>();
 
-        // Adding elements
-        students.add("Jadid");
-        students.add("Rahim");
-        students.add("Karim");
-        students.add("Jadid"); // duplicate allowed
+        // Add elements
+        fruits.add("Apple");
+        fruits.add("Banana");
+        fruits.add("Cherry");
 
-        // Display all elements
-        System.out.println("Student List:");
-        for(String name : students) {
-            System.out.println(name);
-        }
+        // Access element
+        System.out.println("First fruit: " + fruits.get(0));
 
-        System.out.println("------");
+        // Remove element
+        fruits.remove("Banana");
 
-        // Access by index
-        System.out.println("Element at index 1: " + students.get(1));
+        // Print all elements
+        System.out.println("Fruits List: " + fruits);
     }
 }
