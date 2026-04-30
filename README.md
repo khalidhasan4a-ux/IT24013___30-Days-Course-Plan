@@ -763,72 +763,67 @@ Video : https://www.youtube.com/watch?v=TDHaeHAlPFg&list=PLSGubLIO9kuDMrAqU8bVQx
 Example #01
 
 import java.util.ArrayList;
-import java.util.LinkedList;
+import java.util.List;
 
-public class Main {
+public class IT24013 {
+
     public static void main(String[] args) {
 
-        // ArrayList
-        ArrayList<String> students = new ArrayList<>();
+        List<String> fruits = new ArrayList<>();
 
-        students.add("Jadid");
-        students.add("Rahim");
-        students.add("Jadid"); // duplicate allowed
+        fruits.add("Apple");
+        fruits.add("Banana");
+        fruits.add("Cherry");
 
-        System.out.println("ArrayList:");
-        for(String name : students) {
-            System.out.println(name);
-        }
+        System.out.println("Fruits: " + fruits);
 
-        System.out.println("------");
-
-        // LinkedList
-        LinkedList<String> subjects = new LinkedList<>();
-
-        subjects.add("Java");
-        subjects.add("Database");
-        subjects.add("Networking");
-
-        System.out.println("LinkedList:");
-        for(String sub : subjects) {
-            System.out.println(sub);
-        }
+        String firstFruit = fruits.get(0);
+        System.out.println("First fruit: " + firstFruit);
     }
 }
+
 
 
 Example #02
 
-import java.util.HashSet;
-import java.util.HashMap;
+import java.util.*;
 
-public class Main {
+public class IT24013 {
+
     public static void main(String[] args) {
 
+        // LinkedList
+        LinkedList<String> animals = new LinkedList<>();
+        animals.add("Dog");
+        animals.add("Cat");
+        animals.add("Elephant");
+
+        System.out.println("Animals: " + animals);
+
         // HashSet
-        HashSet<String> fruits = new HashSet<>();
+        HashSet<String> colors = new HashSet<>();
+        colors.add("Red");
+        colors.add("Green");
+        colors.add("Blue");
+        colors.add("Red"); // duplicate
 
-        fruits.add("Apple");
-        fruits.add("Banana");
-        fruits.add("Apple"); // duplicate ignored
-
-        System.out.println("HashSet:");
-        for(String item : fruits) {
-            System.out.println(item);
-        }
-
-        System.out.println("------");
+        System.out.println("Colors: " + colors);
 
         // HashMap
-        HashMap<Integer,String> student = new HashMap<>();
+        HashMap<String, Integer> ageMap = new HashMap<>();
+        ageMap.put("Alice", 30);
+        ageMap.put("Bob", 25);
+        ageMap.put("Charlie", 35);
 
-        student.put(101,"Jadid");
-        student.put(102,"Rahim");
+        System.out.println("Age Map: " + ageMap);
 
-        System.out.println("HashMap:");
-        System.out.println(student);
+        int age = ageMap.get("Alice");
+        System.out.println("Alice's Age: " + age);
     }
 }
+
+
+
 
 
 Date : 28/04/2025
