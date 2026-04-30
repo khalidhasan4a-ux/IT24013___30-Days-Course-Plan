@@ -1,30 +1,35 @@
-import java.util.HashSet;
-import java.util.HashMap;
+import java.util.*;
 
-public class Main {
+public class IT24013 {
+
     public static void main(String[] args) {
 
+        // LinkedList
+        LinkedList<String> animals = new LinkedList<>();
+        animals.add("Dog");
+        animals.add("Cat");
+        animals.add("Elephant");
+
+        System.out.println("Animals: " + animals);
+
         // HashSet
-        HashSet<String> fruits = new HashSet<>();
+        HashSet<String> colors = new HashSet<>();
+        colors.add("Red");
+        colors.add("Green");
+        colors.add("Blue");
+        colors.add("Red"); // duplicate
 
-        fruits.add("Apple");
-        fruits.add("Banana");
-        fruits.add("Apple"); // duplicate ignored
-
-        System.out.println("HashSet:");
-        for(String item : fruits) {
-            System.out.println(item);
-        }
-
-        System.out.println("------");
+        System.out.println("Colors: " + colors);
 
         // HashMap
-        HashMap<Integer,String> student = new HashMap<>();
+        HashMap<String, Integer> ageMap = new HashMap<>();
+        ageMap.put("Alice", 30);
+        ageMap.put("Bob", 25);
+        ageMap.put("Charlie", 35);
 
-        student.put(101,"Jadid");
-        student.put(102,"Rahim");
+        System.out.println("Age Map: " + ageMap);
 
-        System.out.println("HashMap:");
-        System.out.println(student);
+        int age = ageMap.get("Alice");
+        System.out.println("Alice's Age: " + age);
     }
 }
