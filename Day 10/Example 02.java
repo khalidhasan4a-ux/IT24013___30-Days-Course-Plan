@@ -1,25 +1,24 @@
 import java.util.LinkedList;
 
-public class Main {
+public class IT24013 {
+
     public static void main(String[] args) {
 
-        LinkedList<String> subjects = new LinkedList<>();
+        // Create LinkedList
+        LinkedList<String> colors = new LinkedList<>();
 
         // Add elements
-        subjects.add("Java");
-        subjects.add("Database");
-        subjects.add("Networking");
+        colors.add("Red");
+        colors.add("Green");
+        colors.add("Blue");
 
-        // Insert element
-        subjects.addFirst("C Programming");
+        // Access element
+        System.out.println("First color: " + colors.get(0));
 
         // Remove element
-        subjects.remove("Database");
+        colors.remove("Green");
 
-        System.out.println("Subject List:");
-
-        for(String sub : subjects) {
-            System.out.println(sub);
-        }
+        // Print all elements
+        System.out.println("Colors List: " + colors);
     }
 }
