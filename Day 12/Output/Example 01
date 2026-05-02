@@ -1,0 +1,3 @@
+Queue: [Apple, Banana, Cherry]
+Removed Item: Apple
+Queue after dequeue: [Banana, Cherry]
