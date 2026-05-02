@@ -904,7 +904,7 @@ Day #11
 
 Topic : HashSet, TreeSet (Sorted + No Duplicate)
 
-Source Code : 
+Source Code : https://github.com/khalidhasan4a-ux/IT24013___30-Days-Course-Plan/tree/main/Day%2011
 
 Video : https://www.youtube.com/watch?v=XDw-BkAZYmY&list=PLSGubLIO9kuDMrAqU8bVQx4Zv-E-6AEnj&index=12
 
@@ -984,6 +984,86 @@ Date : 30/04/2025
 
 Day #12
 
+Topic : Simple Queue, Customer Service Queue 
+
+Source Code : https://github.com/khalidhasan4a-ux/IT24013___30-Days-Course-Plan/tree/main/Day%2012
+
+Video : https://www.youtube.com/watch?v=PccU1wAdnlM&list=PLSGubLIO9kuDMrAqU8bVQx4Zv-E-6AEnj&index=13
+
+
+Example #01
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class IT24013 {
+
+    public static void main(String[] args) {
+
+        // Create Queue
+        Queue<String> queue = new LinkedList<>();
+
+        // Enqueue (add elements)
+        queue.offer("Apple");
+        queue.offer("Banana");
+        queue.offer("Cherry");
+
+        // Display queue
+        System.out.println("Queue: " + queue);
+
+        // Dequeue (remove first element)
+        String removedItem = queue.poll();
+        System.out.println("Removed Item: " + removedItem);
+
+        // Display after dequeue
+        System.out.println("Queue after dequeue: " + queue);
+    }
+}
+
+
+
+Example #02
+
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class IT24013 {
+
+    public static void main(String[] args) {
+
+        // Create queue
+        Queue<String> customerQueue = new LinkedList<>();
+
+        // Customers join
+        customerQueue.offer("Customer 1");
+        customerQueue.offer("Customer 2");
+        customerQueue.offer("Customer 3");
+
+        System.out.println("Current Queue: " + customerQueue);
+
+        // Serve first customer
+        String servedCustomer = customerQueue.poll();
+        System.out.println("Serving: " + servedCustomer);
+
+        System.out.println("Queue after serving one: " + customerQueue);
+
+        // Serve another
+        servedCustomer = customerQueue.poll();
+        System.out.println("Serving: " + servedCustomer);
+
+        // Final queue
+        System.out.println("Final Queue: " + customerQueue);
+    }
+}
+
+
+
+
+Date : 01/05/2025
+
+Day #13
+
 Topic : 
 
 Source Code : 
@@ -1005,9 +1085,13 @@ Example #02
 
 
 
-Date : 01/05/2025
 
-Day #13
+
+
+
+Date : 02/05/2025
+
+Day #14
 
 Topic : 
 
