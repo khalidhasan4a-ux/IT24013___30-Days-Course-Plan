@@ -902,12 +902,128 @@ Date : 29/04/2025
 
 Day #11
 
+Topic : HashSet, TreeSet (Sorted + No Duplicate)
+
+Source Code : 
+
+Video : https://www.youtube.com/watch?v=XDw-BkAZYmY&list=PLSGubLIO9kuDMrAqU8bVQx4Zv-E-6AEnj&index=12
+
+
+Example #01
+
+
+import java.util.HashSet;
+
+public class IT24013 {
+
+    public static void main(String[] args) {
+
+        // Create HashSet
+        HashSet<String> fruits = new HashSet<>();
+
+        // Add elements
+        fruits.add("Apple");
+        fruits.add("Banana");
+        fruits.add("Cherry");
+        fruits.add("Banana"); // duplicate
+
+        // Display set
+        System.out.println("Fruits in HashSet: " + fruits);
+
+        // Check element
+        if(fruits.contains("Apple")){
+            System.out.println("Apple is present in the set.");
+        }
+
+        // Remove element
+        fruits.remove("Cherry");
+
+        System.out.println("After removal: " + fruits);
+    }
+}
+
+
+
+Example #02
+
+
+import java.util.TreeSet;
+
+public class IT24013 {
+
+    public static void main(String[] args) {
+
+        // Create TreeSet
+        TreeSet<Integer> numbers = new TreeSet<>();
+
+        // Add elements
+        numbers.add(5);
+        numbers.add(3);
+        numbers.add(8);
+        numbers.add(1);
+        numbers.add(3); // duplicate
+
+        // Display sorted set
+        System.out.println("Numbers in TreeSet: " + numbers);
+
+        // Check element
+        if(numbers.contains(5)){
+            System.out.println("5 is present in the set.");
+        }
+
+        // Remove element
+        numbers.remove(8);
+
+        System.out.println("After removal: " + numbers);
+    }
+}
+
+
+
+Date : 30/04/2025
+
+Day #12
+
 Topic : 
 
 Source Code : 
 
 Video : 
 
+
 Example #01
+
+
+
+
+
+Example #02
+
+
+
+
+
+
+
+Date : 01/05/2025
+
+Day #13
+
+Topic : 
+
+Source Code : 
+
+Video : 
+
+
+Example #01
+
+
+
+
+
+Example #02
+
+
 
 
