@@ -1,0 +1,5 @@
+Current Queue: [Customer 1, Customer 2, Customer 3]
+Serving: Customer 1
+Queue after serving one: [Customer 2, Customer 3]
+Serving: Customer 2
+Final Queue: [Customer 3]
