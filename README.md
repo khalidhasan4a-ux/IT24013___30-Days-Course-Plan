@@ -1059,3 +1059,326 @@ public class IT24013 {
 
 
 
+Date : 01/05/2025
+
+Day #13
+
+Topic : HashMap, TreeMap
+
+Source Code : https://github.com/khalidhasan4a-ux/IT24013___30-Days-Course-Plan/tree/main/Day%2013
+
+Video : https://www.youtube.com/watch?v=ZarOdaT7P2k&list=PLSGubLIO9kuDMrAqU8bVQx4Zv-E-6AEnj&index=14
+
+
+Example #01
+
+import java.util.HashMap;
+
+public class IT24013 {
+
+    public static void main(String[] args) {
+
+        // Create HashMap
+        HashMap<String, Integer> map = new HashMap<>();
+
+        // Add key-value pairs
+        map.put("Apple", 1);
+        map.put("Banana", 2);
+        map.put("Cherry", 3);
+
+        // Access value
+        System.out.println("Value for Apple: " +
+                           map.get("Apple"));
+
+        // Iterate through HashMap
+        for(String key : map.keySet()){
+            System.out.println(key + " : " + map.get(key));
+        }
+
+        // Check key
+        if(map.containsKey("Banana")){
+            System.out.println("Banana exists in map.");
+        }
+
+        // Remove element
+        map.remove("Cherry");
+
+        System.out.println("After removal: " + map);
+    }
+}
+
+
+Example #02
+
+
+import java.util.TreeMap;
+
+public class IT24013 {
+
+    public static void main(String[] args) {
+
+        // Create TreeMap
+        TreeMap<String, Integer> treeMap = new TreeMap<>();
+
+        // Add key-value pairs
+        treeMap.put("Banana", 2);
+        treeMap.put("Apple", 1);
+        treeMap.put("Cherry", 3);
+
+        // Access value
+        System.out.println("Value for Apple: " +
+                           treeMap.get("Apple"));
+
+        // Iterate through TreeMap
+        for(String key : treeMap.keySet()){
+            System.out.println(key + " : " + treeMap.get(key));
+        }
+
+        // Check key
+        if(treeMap.containsKey("Cherry")){
+            System.out.println("Cherry exists in TreeMap.");
+        }
+
+        // Remove element
+        treeMap.remove("Banana");
+
+        System.out.println("After removal: " + treeMap);
+    }
+}
+
+
+
+
+
+Date : 02/05/2025
+
+Day #14
+
+Topic : Library Management using ArrayList, Order Management using HashMap
+
+Source Code : https://github.com/khalidhasan4a-ux/IT24013___30-Days-Course-Plan/tree/main/Day%2014
+
+Video : https://www.youtube.com/watch?v=gtmBSl10DvY&list=PLSGubLIO9kuDMrAqU8bVQx4Zv-E-6AEnj&index=15
+
+
+Example #01
+
+import java.util.ArrayList;
+
+public class IT24013 {
+
+    private ArrayList<String> books;
+
+    // Constructor
+    public IT24013() {
+        books = new ArrayList<>();
+    }
+
+    // Add book
+    public void addBook(String book) {
+        books.add(book);
+    }
+
+    // Display books
+    public void displayBooks() {
+
+        System.out.println("Books in the Library:");
+
+        for(String book : books){
+            System.out.println(book);
+        }
+    }
+
+    public static void main(String[] args) {
+
+        IT24013 myLibrary = new IT24013();
+
+        myLibrary.addBook("The Great Gatsby");
+        myLibrary.addBook("To Kill a Mockingbird");
+
+        myLibrary.displayBooks();
+    }
+}
+
+
+Example #02
+
+import java.util.HashMap;
+
+public class IT24013 {
+
+    private HashMap<Integer, String> orders;
+
+    // Constructor
+    public IT24013() {
+        orders = new HashMap<>();
+    }
+
+    // Add order
+    public void addOrder(int orderId, String customerName) {
+
+        orders.put(orderId, customerName);
+    }
+
+    // Display orders
+    public void displayOrders() {
+
+        System.out.println("Customer Orders:");
+
+        for(int orderId : orders.keySet()) {
+
+            System.out.println("Order ID: " +
+                    orderId +
+                    ", Customer Name: " +
+                    orders.get(orderId));
+        }
+    }
+
+    public static void main(String[] args) {
+
+        IT24013 orderManagement =
+                new IT24013();
+
+        orderManagement.addOrder(101, "Alice");
+        orderManagement.addOrder(102, "Bob");
+
+        orderManagement.displayOrders();
+    }
+}
+
+
+
+
+Date : 03/05/2025
+
+Day #15
+
+Topic : Write to File, Read from File
+
+Source Code : https://github.com/khalidhasan4a-ux/IT24013___30-Days-Course-Plan/tree/main/Day%2015
+
+Video : https://www.youtube.com/watch?v=63c8XmiOrzo&list=PLSGubLIO9kuDMrAqU8bVQx4Zv-E-6AEnj&index=16
+
+
+Example #01
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class IT24013 {
+
+    public static void main(String[] args) {
+
+        try {
+
+            FileWriter writer =
+                    new FileWriter("output.txt");
+
+            BufferedWriter bufferedWriter =
+                    new BufferedWriter(writer);
+
+            bufferedWriter.write("Hello, World!");
+            bufferedWriter.newLine();
+
+            bufferedWriter.write(
+                    "This is a Java file handling example.");
+
+            bufferedWriter.close();
+
+            System.out.println(
+                    "Data written to file successfully.");
+
+        } catch (IOException e) {
+
+            System.out.println(
+                    "An error occurred: " + e.getMessage());
+        }
+    }
+}
+
+
+
+Example #02
+
+
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class IT24013 {
+
+    public static void main(String[] args) {
+
+        try {
+
+            FileReader reader =
+                    new FileReader("output.txt");
+
+            BufferedReader bufferedReader =
+                    new BufferedReader(reader);
+
+            String line;
+
+            while((line = bufferedReader.readLine()) != null){
+
+                System.out.println(line);
+            }
+
+            bufferedReader.close();
+
+        } catch (IOException e) {
+
+            System.out.println(
+                    "An error occurred: " + e.getMessage());
+        }
+    }
+}
+
+
+
+
+Date : 04/05/2025
+
+Day #16
+
+Topic :  
+
+Source Code : 
+
+Video : 
+
+
+Example #01
+
+
+
+
+Example #02
+
+
+
+
+
+
+Date : 05/05/2025
+
+Day #17
+
+Topic :  
+
+Source Code : 
+
+Video : 
+
+
+Example #01
+
+
+
+
+Example #02
+
+
+
