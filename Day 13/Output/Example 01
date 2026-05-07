@@ -1,0 +1,6 @@
+Value for Apple: 1
+Apple : 1
+Banana : 2
+Cherry : 3
+Banana exists in map.
+After removal: {Apple=1, Banana=2}
