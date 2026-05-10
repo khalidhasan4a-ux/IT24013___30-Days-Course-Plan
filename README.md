@@ -1343,21 +1343,117 @@ Date : 04/05/2025
 
 Day #16
 
-Topic :  
+Topic : Check File Exists, Write to File, Read from File
 
-Source Code : 
+Source Code : https://github.com/khalidhasan4a-ux/IT24013___30-Days-Course-Plan/tree/main/Day%2016
 
-Video : 
+Video : https://www.youtube.com/watch?v=63c8XmiOrzo&list=PLSGubLIO9kuDMrAqU8bVQx4Zv-E-6AEnj&index=16&t=1s
 
 
 Example #01
 
+import java.io.File;
 
+public class IT24013 {
+
+    public static void main(String[] args) {
+
+        File myFile = new File("example.txt");
+
+        // Check file exists
+        if(myFile.exists()){
+
+            System.out.println("File exists.");
+        }
+        else{
+
+            System.out.println("File does not exist.");
+        }
+    }
+}
 
 
 Example #02
 
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class IT24013 {
+
+    public static void main(String[] args) {
+
+        try{
+
+            FileWriter writer =
+                    new FileWriter("output.txt");
+
+            BufferedWriter bufferedWriter =
+                    new BufferedWriter(writer);
+
+            bufferedWriter.write("Hello, World!");
+            bufferedWriter.newLine();
+
+            bufferedWriter.write(
+                    "This is a Java file handling example.");
+
+            bufferedWriter.close();
+
+            System.out.println(
+                    "Data written successfully.");
+
+        }
+        catch(IOException e){
+
+            System.out.println(
+                    "An error occurred: " +
+                            e.getMessage());
+        }
+    }
+}
+
+
+
+
+Example #03
+
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class IT24013 {
+
+    public static void main(String[] args) {
+
+        try{
+
+            FileReader reader =
+                    new FileReader("output.txt");
+
+            BufferedReader bufferedReader =
+                    new BufferedReader(reader);
+
+            String line;
+
+            while((line =
+                    bufferedReader.readLine()) != null){
+
+                System.out.println(line);
+            }
+
+            bufferedReader.close();
+        }
+
+        catch(IOException e){
+
+            System.out.println(
+                    "An error occurred: " +
+                            e.getMessage());
+        }
+    }
+}
 
 
 
@@ -1366,6 +1462,294 @@ Date : 05/05/2025
 
 Day #17
 
+Topic : Read Bytes from File, Write Bytes to File, Copy File Using Byte Stream
+
+Source Code : https://github.com/khalidhasan4a-ux/IT24013___30-Days-Course-Plan/tree/main/Day%2017
+
+Video : https://www.youtube.com/watch?v=NIxcCzJOj3c&list=PLSGubLIO9kuDMrAqU8bVQx4Zv-E-6AEnj&index=17
+
+
+Example #01
+
+import java.io.FileInputStream;
+import java.io.IOException;
+
+public class IT24013 {
+
+    public static void main(String[] args) {
+
+        FileInputStream fileInputStream = null;
+
+        try {
+
+            // Open file
+            fileInputStream =
+                    new FileInputStream("example.txt");
+
+            int byteData;
+
+            // Read bytes until end of file
+            while((byteData =
+                    fileInputStream.read()) != -1) {
+
+                // Convert byte to character
+                System.out.print((char) byteData);
+            }
+
+        }
+        catch (IOException e) {
+
+            e.printStackTrace();
+        }
+
+        finally {
+
+            // Close stream
+            if(fileInputStream != null) {
+
+                try {
+
+                    fileInputStream.close();
+                }
+                catch (IOException e) {
+
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+}
+
+Example #02
+
+
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class IT24013 {
+
+    public static void main(String[] args) {
+
+        FileOutputStream fileOutputStream = null;
+
+        try {
+
+            // Create output stream
+            fileOutputStream =
+                    new FileOutputStream("output.txt");
+
+            String data = "Hello, World!";
+
+            // Convert string to bytes
+            byte[] byteData = data.getBytes();
+
+            // Write bytes
+            fileOutputStream.write(byteData);
+
+            System.out.println(
+                    "Data written successfully.");
+
+        }
+        catch (IOException e) {
+
+            e.printStackTrace();
+        }
+
+        finally {
+
+            // Close stream
+            if(fileOutputStream != null) {
+
+                try {
+
+                    fileOutputStream.close();
+                }
+                catch (IOException e) {
+
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+}
+
+
+Example #03
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class IT24013 {
+
+    public static void main(String[] args) {
+
+        FileInputStream inputFile = null;
+        FileOutputStream outputFile = null;
+
+        try {
+
+            // Read source file
+            inputFile =
+                    new FileInputStream("source.txt");
+
+            // Write destination file
+            outputFile =
+                    new FileOutputStream("destination.txt");
+
+            int byteData;
+
+            // Copy bytes
+            while((byteData =
+                    inputFile.read()) != -1) {
+
+                outputFile.write(byteData);
+            }
+
+            System.out.println(
+                    "File copied successfully.");
+
+        }
+        catch (IOException e) {
+
+            e.printStackTrace();
+        }
+
+        finally {
+
+            // Close streams
+            try {
+
+                if(inputFile != null)
+                    inputFile.close();
+
+                if(outputFile != null)
+                    outputFile.close();
+
+            }
+            catch (IOException e) {
+
+                e.printStackTrace();
+            }
+        }
+    }
+}
+
+
+Date : 06/05/2025
+
+Day #18
+
+Topic : Check if File Exists, Write Data to File using BufferedWriter, Read Data from File using BufferedReader
+
+Source Code : https://github.com/khalidhasan4a-ux/IT24013___30-Days-Course-Plan/tree/main/Day%2018
+
+Video : https://www.youtube.com/watch?v=u0SsmS1wFWA&list=PLSGubLIO9kuDMrAqU8bVQx4Zv-E-6AEnj&index=18
+
+
+Example #01
+
+
+import java.io.File;
+
+public class IT24013 {
+
+    public static void main(String[] args) {
+
+        File myFile = new File("example.txt");
+
+        if(myFile.exists()) {
+
+            System.out.println("File exists.");
+        }
+        else {
+
+            System.out.println("File does not exist.");
+        }
+    }
+}
+
+Example #02
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class IT24013 {
+
+    public static void main(String[] args) {
+
+        try {
+
+            FileWriter writer =
+                    new FileWriter("output.txt");
+
+            BufferedWriter bufferedWriter =
+                    new BufferedWriter(writer);
+
+            bufferedWriter.write("Hello, World!");
+
+            bufferedWriter.newLine();
+
+            bufferedWriter.write(
+                    "This is a Java file handling example.");
+
+            bufferedWriter.close();
+
+            System.out.println(
+                    "Data written to file successfully.");
+
+        }
+        catch(IOException e) {
+
+            System.out.println(
+                    "An error occurred: "
+                    + e.getMessage());
+        }
+    }
+}
+
+Example #03
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class IT24013 {
+
+    public static void main(String[] args) {
+
+        try {
+
+            FileReader reader =
+                    new FileReader("output.txt");
+
+            BufferedReader bufferedReader =
+                    new BufferedReader(reader);
+
+            String line;
+
+            while((line =
+                    bufferedReader.readLine()) != null) {
+
+                System.out.println(line);
+            }
+
+            bufferedReader.close();
+        }
+        catch(IOException e) {
+
+            System.out.println(
+                    "An error occurred: "
+                    + e.getMessage());
+        }
+    }
+}
+
+
+Date : 07/05/2025
+
+Day #19
+
 Topic :  
 
 Source Code : 
@@ -1382,3 +1766,22 @@ Example #02
 
 
 
+
+
+Date : 08/05/2025
+
+Day #20
+
+Topic :  
+
+Source Code : 
+
+Video : 
+
+
+Example #01
+
+
+
+
+Example #02
