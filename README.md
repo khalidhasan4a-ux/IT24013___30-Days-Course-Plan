@@ -1750,29 +1750,297 @@ Date : 07/05/2025
 
 Day #19
 
-Topic :  
+Topic : Create Directory using File Class, List Directory Contents, Delete Directory
 
-Source Code : 
+Source Code : https://github.com/khalidhasan4a-ux/IT24013___30-Days-Course-Plan/tree/main/Day%2019
 
-Video : 
+Video : https://www.youtube.com/watch?v=svLv3q-_Fl0&list=PLSGubLIO9kuDMrAqU8bVQx4Zv-E-6AEnj&index=19
 
 
 Example #01
 
+import java.io.File;
 
+public class IT24013 {
+
+    public static void main(String[] args) {
+
+        // Directory path
+        String directoryPath = "Projects/Java";
+
+        // Create File object
+        File directory =
+                new File(directoryPath);
+
+        // Check and create directory
+        if(!directory.exists()) {
+
+            boolean created =
+                    directory.mkdirs();
+
+            if(created) {
+
+                System.out.println(
+                        "Directory created successfully.");
+            }
+            else {
+
+                System.out.println(
+                        "Failed to create directory.");
+            }
+        }
+        else {
+
+            System.out.println(
+                    "Directory already exists.");
+        }
+    }
+}
 
 
 Example #02
 
+import java.io.File;
 
+public class IT24013 {
 
+    public static void main(String[] args) {
 
+        String directoryPath =
+                "Projects/Java";
+
+        File directory =
+                new File(directoryPath);
+
+        // Get all files/folders
+        String[] contents =
+                directory.list();
+
+        if(contents != null) {
+
+            System.out.println(
+                    "Directory Contents:");
+
+            for(String fileName : contents) {
+
+                System.out.println(fileName);
+            }
+        }
+        else {
+
+            System.out.println(
+                    "Directory is empty or not found.");
+        }
+    }
+}
+
+Example #03
+
+import java.io.File;
+
+public class IT24013 {
+
+    public static void main(String[] args) {
+
+        String directoryPath =
+                "Projects/Java";
+
+        File directory =
+                new File(directoryPath);
+
+        if(directory.exists()) {
+
+            boolean deleted =
+                    directory.delete();
+
+            if(deleted) {
+
+                System.out.println(
+                        "Directory deleted successfully.");
+            }
+            else {
+
+                System.out.println(
+                        "Failed to delete directory.");
+            }
+        }
+        else {
+
+            System.out.println(
+                    "Directory does not exist.");
+        }
+    }
+}
 
 Date : 08/05/2025
 
 Day #20
 
-Topic :  
+Topic : LocalDate, LocalDateTime, ZonedDateTime
+
+Source Code : https://github.com/khalidhasan4a-ux/IT24013___30-Days-Course-Plan/tree/main/Day%2020
+
+Video : https://www.youtube.com/watch?v=rs1WKrln-9U&list=PLSGubLIO9kuDMrAqU8bVQx4Zv-E-6AEnj&index=20
+
+
+Example #01
+
+import java.time.LocalDate;
+
+public class IT24013 {
+
+    public static void main(String[] args) {
+
+        // Get current date
+        LocalDate today =
+                LocalDate.now();
+
+        System.out.println(
+                "Today's date: " + today);
+    }
+}
+
+
+Example #02
+
+import java.time.LocalDateTime;
+
+public class IT24013 {
+
+    public static void main(String[] args) {
+
+        // Get current date and time
+        LocalDateTime now =
+                LocalDateTime.now();
+
+        System.out.println(
+                "Current date and time: "
+                + now);
+    }
+}
+
+
+Example #03
+
+import java.time.ZonedDateTime;
+
+public class IT24013 {
+
+    public static void main(String[] args) {
+
+        // Get date and time with timezone
+        ZonedDateTime zonedNow =
+                ZonedDateTime.now();
+
+        System.out.println(
+                "Current date and time with zone: "
+                + zonedNow);
+    }
+}
+
+
+
+
+Date : 09/05/2025
+
+Day #21
+
+Topic : Formatting Date using DateTimeFormatter, Parsing and Formatting User Birthdate, 
+
+Source Code : https://github.com/khalidhasan4a-ux/IT24013___30-Days-Course-Plan/tree/main/Day%2021
+
+Video : https://www.youtube.com/watch?v=ieveCaLfrlE&list=PLSGubLIO9kuDMrAqU8bVQx4Zv-E-6AEnj&index=21
+
+
+Example #01
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
+public class IT24013 {
+
+    public static void main(String[] args) {
+
+        // Current date
+        LocalDate currentDate =
+                LocalDate.now();
+
+        // Define format
+        DateTimeFormatter formatter =
+                DateTimeFormatter.ofPattern(
+                        "dd/MM/yyyy");
+
+        // Format date
+        String formattedDate =
+                currentDate.format(formatter);
+
+        // Print result
+        System.out.println(
+                "Formatted Date: "
+                + formattedDate);
+    }
+}
+
+
+
+Example #02
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
+
+public class IT24013 {
+
+    public static void main(String[] args) {
+
+        Scanner scanner =
+                new Scanner(System.in);
+
+        // User name
+        System.out.print(
+                "Enter your name: ");
+
+        String name =
+                scanner.nextLine();
+
+        // User birthdate
+        System.out.print(
+                "Enter birthdate (yyyy-MM-dd): ");
+
+        String birthdateInput =
+                scanner.nextLine();
+
+        // Parse string to LocalDate
+        LocalDate birthdate =
+                LocalDate.parse(birthdateInput);
+
+        // Output format
+        DateTimeFormatter formatter =
+                DateTimeFormatter.ofPattern(
+                        "EEEE, MMM dd, yyyy");
+
+        // Format birthdate
+        String formattedBirthdate =
+                birthdate.format(formatter);
+
+        // Display result
+        System.out.println(
+                "Hello " + name
+                + "! Your birthdate is: "
+                + formattedBirthdate);
+
+        scanner.close();
+    }
+}
+
+
+
+
+Date : 10/05/2025
+
+Day #22
+
+Topic : 
 
 Source Code : 
 
@@ -1783,5 +2051,10 @@ Example #01
 
 
 
-
 Example #02
+
+
+
+Example #03
+
+
